@@ -1,9 +1,11 @@
 require('dotenv').config();
 const express = require("express")
 const app = express();
+const pool = require('./config/db.js')
+
 
 app.get('/',(req, res) => {
-    res.send({message: "API Online"});
+res.send({message: "API Online"});
 });
 
 app.use(express.json())
